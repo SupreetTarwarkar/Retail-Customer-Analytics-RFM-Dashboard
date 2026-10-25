@@ -10,6 +10,18 @@
 
 ---
 
+## Original tutorial and guided-project credit
+
+This project was recreated by following **Mansi Goel (Mansi G.)** and her end-to-end SQL, Python and Power BI tutorial. Her tutorial provides the instructional foundation and original business case; this implementation follows that methodology with **PostgreSQL and Google Colab** and customizes the Power BI report with a forest-and-sage design.
+
+- **[Watch Mansi Goel's complete guided project video — SQL, Python & Power BI](https://www.youtube.com/watch?v=LQa0SiuZfhA)**
+- **[Mansi G. — YouTube channel](https://www.youtube.com/@Mansi.goel.offical)** — further analytics tutorials and learning material
+- **[Mansi Goel's original IKEA GitHub repository](https://github.com/the-mansi-goel/IKEA)** — source BRD, dataset references and project material
+
+Credit for the original concept and teaching belongs to Mansi Goel. All modifications described here are the student's implementation and visual customization; this is **not** an independent commissioned assignment or a real IKEA/Dunelm commercial engagement.
+
+---
+
 ## 1. Project overview
 
 A retailer needs to understand **who its most valuable customers are, how spending and engagement differ by segment, and which customers may need retention attention**. This project follows a business-analytics workflow from raw transactional data to an interactive three-page Power BI report.
@@ -60,6 +72,10 @@ The instructor's original environment uses SQL Server/SSMS and a local Jupyter e
 
 ## 4. Data source and processing
 
+**Why the Dataset folder contains no large files:** The raw UCI source files, the intermediate `RetailCleaned.csv`, and the final export workbook are intentionally **not** committed. They can be obtained or reproduced using the linked source and the published processing scripts. The `Dataset/README.md` file documents provenance and counts only, matching the approach in the NSE repository.
+
+
+
 **Source:** UCI Machine Learning Repository — [Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii), donated by Daqing Chen. The historical transaction dataset spans December 2009 to December 2011.
 
 ```text
@@ -96,7 +112,7 @@ Home Page | Business Overview | RFM Analysis
 
 **32,907 duplicate groups is not the number of records removed.** The cleaned dataset retains one row per group, which removes 34,335 redundant occurrences.
 
-SQL scripts: [01_SQL](01_SQL/README.md). Import the source files into the corresponding staging tables before running the combined-table SQL. Keep the raw source files unchanged.
+SQL scripts: [SQL](SQL/README.md). Import the source files into the corresponding staging tables before running the combined-table SQL. Keep the raw source files unchanged.
 
 ## 5. RFM and churn methodology
 
@@ -123,7 +139,7 @@ Customers are assigned **one** of six mutually exclusive categories by ordered b
 
 **Important data-grain safeguard:** the enriched Power BI table is at transaction-line grain. Customer-level RFM variables are repeated on transaction lines. Do **not** sum repeated customer-level monetary/frequency/recency columns across rows.
 
-Python folder: [02_Python](02_Python/README.md). The executed notebook will be added after final validation.
+Python folder: [Python](Python/README.md). The executed notebook will be added after final validation.
 
 ## 6. Dashboard structure
 
@@ -138,7 +154,7 @@ Country and segment performance summaries, average R/F/M scores, average custome
 
 The redesign uses dark forest green, sage accents, white cards, and Segoe UI. It is an illustrative visual identity, not commercial Dunelm data.
 
-[Power BI report files and publishing instructions](03_PowerBI/README.md) · [Dashboard screenshots](04_Screenshots/README.md)
+[Power BI report files and publishing instructions](PBIX/README.md) · [Dashboard screenshots](Images/README.md)
 
 ## 7. Findings and business interpretation
 
@@ -157,18 +173,17 @@ See [Insights and Limitations](Challenges-and-Learnings/README.md).
 ```text
 Retail-Customer-Analytics-RFM-Dashboard/
 ├── README.md
-├── .gitignore
-├── 01_SQL/
+├── SQL/
 │   ├── README.md
 │   ├── 01_Data_Import_and_Combination.sql
 │   ├── 02_ecommerce_customer_analytics.sql
 │   └── 03_retail_cleaned.sql
-├── 02_Python/
+├── Python/
 │   └── README.md                 # Notebook to be added
-├── 03_PowerBI/
+├── PBIX/
 │   ├── README.md
 │   └── Dunelm_Forest_Sage_Theme.json
-├── 04_Screenshots/
+├── Images/
 │   └── README.md                 # Final screenshots to be added
 ├── Dataset/
 │   └── README.md
@@ -181,7 +196,7 @@ Retail-Customer-Analytics-RFM-Dashboard/
 ## 9. Reproduction instructions
 
 1. Download Online Retail II and preserve original sheets/source data.
-2. Create and populate the PostgreSQL staging tables, then run the scripts in [01_SQL](01_SQL/README.md) in order. Validate expected row counts.
+2. Create and populate the PostgreSQL staging tables, then run the scripts in [01_SQL](SQL/README.md) in order. Validate expected row counts.
 3. Export `retail_cleaned` to CSV with headers.
 4. Run the forthcoming Google Colab notebook on that CSV. Validate 5,881 distinct customers and the documented analysis filters.
 5. Export the enriched transaction dataset; open the PBIX once it is attached and update the local Power BI data-source path.
@@ -194,7 +209,7 @@ For the original learning materials and complete walkthrough, see the [instructo
 - Historical 2009–2011 retail data; not a present-day business dashboard.
 - Inactivity threshold is a business rule and was not statistically calibrated.
 - Returns, missing customer IDs and frequency ties affect analytic choices.
-- Unclear source-sheet labels should not be used for year comparisons until the mapping is confirmed.
+- Year and period summaries should be derived from validated invoice dates, not simply inferred from worksheet names.
 - Chart currency formatting must be reconciled before quoting USD figures.
 - Neither actual IKEA nor Dunelm financial metrics can be inferred from this dataset.
 - No independently verified campaign impact or predictive accuracy is claimed.
@@ -205,6 +220,12 @@ For the original learning materials and complete walkthrough, see the [instructo
 
 [GitHub](https://github.com/SupreetTarwarkar) · [LinkedIn](https://www.linkedin.com/in/supreettarwarkar/)
 
-**Guided by:** [Mansi Goel — original IKEA tutorial and project](https://github.com/the-mansi-goel/IKEA). This project identifies the guided source and distinguishes the tutorial methodology from the independent implementation and redesign.
+**Guided by: Mansi Goel (Mansi G.)** — Her full video walks through business requirements, SQL preparation, Python RFM segmentation and a three-page Power BI report.
+
+- [Watch Mansi Goel's complete SQL, Python & Power BI tutorial](https://www.youtube.com/watch?v=LQa0SiuZfhA)
+- [Visit Mansi G.'s YouTube channel](https://www.youtube.com/@Mansi.goel.offical)
+- [Explore her original GitHub repository and resources](https://github.com/the-mansi-goel/IKEA)
+
+I recommend the original video and channel to learners who want to recreate the guided workflow before adapting it to their own requirements.
 
 **Data:** UCI Online Retail II (Daqing Chen). Respect source attribution and applicable usage terms.

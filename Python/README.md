@@ -1,5 +1,7 @@
 # Python RFM analysis — Google Colab
 
+Unlike the **NSE dashboard**, this project includes an actual Python/Pandas analysis stage. This is why a separate Python folder is required.
+
 The complete executed `.ipynb` notebook will be added when the final file is supplied and verified. This folder is reserved for the real notebook, not invented code.
 
 ### Implemented analysis (from saved validation notes)

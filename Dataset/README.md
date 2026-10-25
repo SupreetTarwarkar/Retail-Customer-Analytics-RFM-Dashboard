@@ -4,7 +4,7 @@
 
 This historical, anonymized UK retailer dataset covers December 2009–December 2011 and contains **1,067,371** raw transaction-line records in the two source sheets.
 
-This repository documents the data pipeline rather than uploading the entire raw, cleaned and enriched data repeatedly. Obtain the original from UCI and review licensing/attribution requirements.
+No raw CSV files, intermediate cleaned CSV files or final Excel exports are stored in this repository. This folder contains source attribution and processing guidance only. The source can be downloaded from UCI; derived files can be regenerated. Obtain the original from UCI and review licensing/attribution requirements.
 
 ### Data path
 
