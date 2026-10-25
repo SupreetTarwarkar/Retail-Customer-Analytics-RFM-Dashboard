@@ -1,20 +1,13 @@
-# Dataset and source attribution
+# Dataset
 
-**Dataset:** [Online Retail II, UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/502/online+retail+ii), donated by Daqing Chen.
+**Source:** [Online Retail II - UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/502/online+retail+ii)
 
-This historical, anonymized UK retailer dataset covers December 2009–December 2011 and contains **1,067,371** raw transaction-line records in the two source sheets.
+Two sheets of retail transactions from **December 2009 to December 2011**, with **1,067,371** rows in total.
 
-No raw CSV files, intermediate cleaned CSV files or final Excel exports are stored in this repository. This folder contains source attribution and processing guidance only. The source can be downloaded from UCI; derived files can be regenerated. Obtain the original from UCI and review licensing/attribution requirements.
+The data includes invoice details, item descriptions, quantities, prices, customer IDs and countries.
 
-### Data path
+### Notes
 
-1. Import both original sheets into PostgreSQL staging tables.
-2. Combine via `UNION ALL` and run quality checks.
-3. Deduplicate to **1,033,036** rows.
-4. Use purchase inclusion rules and customer features to produce **779,495** enriched transaction rows and **5,881** customer-level profiles.
-
-**Note:** Source-sheet names and period-label mapping should be checked against the original file; analysis should rely on `invoicedate` rather than an unverified `sourcesheet` string.
-
-### Data privacy
-
-Customer IDs in this public historical dataset are anonymized. No original individual customer data from a real Dunelm or IKEA business engagement is used.
+- The analysis uses historical data, not current business activity.
+- Churn is defined as more than **90 days** without a recorded purchase.
+- The dashboard uses a **$** display format. The source is a UK retailer, so those amounts should not be presented as verified USD conversions.

@@ -1,78 +1,29 @@
-# Challenges, decisions and lessons learned
+# Challenges & Learnings
 
-This documents implementation differences and data-quality caveats of the recreated guided project. It does not claim these challenges were part of [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical)'s own environment unless explicitly stated.
+This project was guided by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical), but I used a different setup for SQL and Python and made changes to the Power BI report.
 
-## 1. Recreating a SQL Server tutorial in PostgreSQL
+## 1. Moving from SSMS to PostgreSQL
 
-The original demonstration uses **SQL Server Express with SQL Server Management Studio (SSMS)**. This implementation used PostgreSQL staging tables, manual CSV imports, PostgreSQL casts, `TO_TIMESTAMP`, `UNION ALL`, and a window-based deduplication query.
+The tutorial uses SQL Server and SSMS. I worked in PostgreSQL with pgAdmin, so the import steps and conversion syntax were different. I created two staging tables, used `UNION ALL` to combine the data and handled dates with `TO_TIMESTAMP()`.
 
-**Lesson:** preserve raw tables and validate every transformation with row counts.
+## 2. Cleaning the transaction data
 
-## 2. CSV encoding and large exports
+The combined files contained **1,067,371 rows**. The quality checks covered customer IDs, quantities, descriptions and duplicates. After removing **34,335 extra duplicate rows**, the SQL cleaned table contained **1,033,036 rows**.
 
-An original CSV import encountered a non-UTF-8 pound-sign byte. A pgAdmin grid export stalled on a large output. A PostgreSQL server-side `COPY` export returned `COPY 1033036` and included a CSV header.
+I also encountered a CSV encoding issue during import and used PostgreSQL's `COPY` command to export the large cleaned table successfully.
 
-**Lesson:** know whether the file is on the database server or the client, specify the correct encoding, and validate exported row counts.
+## 3. Working in Google Colab
 
-## 3. Duplicate groups versus duplicate rows
+Instead of Anaconda and local Jupyter Notebook, I used Google Colab to calculate RFM scores and create six customer segments. The final customer table covered **5,881 customers**.
 
-There were **32,907** groups containing repeated transaction values, but removing extra occurrences eliminated **34,335** rows.
+## 4. Improving the Power BI report
 
-**Lesson:** count redundant *rows*, not merely groups, when reporting cleaning outcomes. The existing SQL chooses an arbitrary survivor when source-sheet labels differ.
+I redesigned the Home Page using a forest-and-sage theme and worked on consistent titles, spacing, navigation buttons and visuals.
 
-## 4. Why exclude unidentified or nonpurchase transactions?
+I also added a **Churn Status** label so the existing True / False churn flag appears as **Churned / Not Churned**. The underlying rule was not changed.
 
-RFM requires a customer ID and purchase eligibility. Missing IDs cannot be attributed to an individual, and negative quantities can represent returns or cancellations.
+## 5. Keeping the analysis useful
 
-**Lesson:** filtering for a defined question is not the same as declaring the underlying records erroneous.
+A useful dashboard needs more than charts. This project helped me check totals at each stage, understand the difference between transaction rows and customer counts, and present customer value and churn in a way that is easier to discuss.
 
-## 5. Computing RFM correctly
-
-Frequency is the number of **unique invoices**, not number of product lines. The Recency measure uses a fixed historical snapshot date of 2011-12-10. Recency scores are reversed. Frequency ties are ranked to enable quantile binning.
-
-**Lesson:** document measurement grain, score direction, and reproducibility decisions.
-
-## 6. Churn definition is an assumption
-
-`Recency > 90` is a rule-based inactivity label, not predictive churn.
-
-**Lesson:** a descriptive segment flag should not be presented as model accuracy, observed customer loss or campaign impact.
-
-## 7. Transaction-level versus customer-level grain
-
-Joining RFM attributes back onto each transaction line repeats those attributes. The resulting report table has **779,495** transaction-level records, while RFM is built for **5,881** individual customers.
-
-**Lesson:** never naively sum RFM features across repeated lines; use appropriately scoped measures.
-
-## 8. Colab adaptation
-
-The original tutorial launches **Jupyter Notebook from Anaconda**; this implementation instead runs the Python analysis with **Google Colab**. Inputs and exports live under an ephemeral `/content/` path unless saved persistently.
-
-**Lesson:** environment changes affect file paths, persistence and resources; they should not change analytical logic.
-
-## 9. Dashboard customization and attribution
-
-The original reference uses IKEA-inspired branding. The new Power BI design uses forest green and sage, a redesigned Home Page, navigation controls, formatted KPIs, and interactive report pages.
-
-**Lesson:** separate a guided foundation from original implementation work, and never imply a real corporate engagement. Explicit instructor credit preserves provenance.
-
-## 10. User-friendly churn labels without changing classification
-
-The tutorial exposes the churn status as a Boolean (`True` / `False`). To make legends, slicers and tooltips clearer to business users, a **`Churn Status`** field was added in Power BI so `True` reads **Churned** and `False` reads **Not Churned**.
-
-**Lesson:** readable report labels improve communication, but the underlying `Recency > 90` historical inactivity rule is unchanged.
-
-## 11. Analytical limitations
-
-- Historical data, not current sales.
-- Report uses a displayed dollar symbol, but the original source is a UK retailer; FX conversion is **not** established.
-- Potential source sheet-year label mismatch requires validation before relying on `sourcesheet`.
-- Reported Q4 uplift is descriptive, not proven seasonality causation.
-- Marketing and retention actions are **suggestions**, not executed interventions.
-
-## Credit
-
-**Guided project:** [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical) - [original GitHub repository](https://github.com/the-mansi-goel/IKEA).  
-**Tutorial video:** [Watch the complete SQL, Python and Power BI walkthrough](https://youtu.be/LQa0SiuZfhA).
-
-**Independent implementation and redesign:** Supreet Jayant Tarwarkar.
+[Back to the main README](../README.md)

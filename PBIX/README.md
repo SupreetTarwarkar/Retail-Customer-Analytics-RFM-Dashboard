@@ -1,37 +1,31 @@
-# Power BI report
+# Power BI Dashboard
 
-**Report title:** Retail Customer Analytics - RFM Segmentation & Churn Analysis
+**Retail Customer Analytics - RFM Segmentation & Churn Analysis**
 
-**Three pages:** Home Page → Business Overview → RFM Analysis.
+The report has three pages and uses a forest-green and sage theme.
 
-The final report was developed in Power BI Desktop and styled using **Dunelm-inspired forest and sage colors**. This is an educational redesign; the dataset is not from Dunelm.
+## Home Page
 
-### Report configuration
+A landing page with buttons for both analysis pages, a short project description and definitions of the key metrics.
 
-- KPI cards: Total Customers, Total Revenue, Churned %, Avg Customer Value.
-- Business Overview: segment comparisons, revenue/customer selection, and time trends.
-- RFM Analysis: country/segment performance summaries, customer value and churn trends.
-- Interaction: slicers, clear-slicer action, page navigation, bookmark-controlled toggles.
-- **Readable churn status:** a report field named `Churn Status` presents Boolean `IsChurned` as `Churned` and `Not Churned` instead of raw `True` / `False` in the relevant visual legends, selections and tooltips. This is a display/labeling enhancement, not a changed churn algorithm.
+## Business Overview
 
-### Final PBIX file
+- KPIs for total customers, total revenue, churn rate and average customer value
+- Revenue and customer comparisons across six segments
+- Month, quarter and year trend charts
+- Filters for time, country, segment and churn status
 
-**Filename:** `Retail_Customer_Analytics_RFM_Dashboard.pbix`
+## RFM Analysis
 
-**Publication:** The finalized PBIX is being retained for upload separately; it is not yet in this GitHub repository. The full report file is approximately 17 MB. When uploaded, it will be placed in this folder.
+- Country and segment performance summaries
+- Average Recency, Frequency and Monetary scores
+- Segment and country average customer value
+- Churn trends across month, quarter and year
 
-### Theme
+The report uses **Churned** and **Not Churned** in place of the Boolean labels True and False.
 
-`Dunelm_Forest_Sage_Theme.json` contains the consistent title and data-palette colors.
+### Design
 
-### Interactive Power BI report
+Theme: [Dunelm_Inspired_Retail_Light_Theme.json](Dunelm_Inspired_Retail_Light_Theme.json)
 
-**Link pending final Power BI Service publication** - no placeholder URL has been presented as live.
-
-### Refresh
-
-The report may reference a local source path. Open in Power BI Desktop, update Data source settings/Power Query as needed, refresh from the exported data and validate page totals before publication.
-
-### Guided tutorial reference
-
-[Watch the original Power BI guided project](https://youtu.be/LQa0SiuZfhA) by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical).
+[Main project README](../README.md)
