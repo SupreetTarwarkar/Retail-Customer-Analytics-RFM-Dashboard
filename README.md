@@ -91,7 +91,7 @@ The main implementation challenges, including PostgreSQL differences, data clean
 
 ## 9. Acknowledgement
 
-This project is based on the end-to-end SQL, Python and Power BI tutorial by [Mansi Goel (Mansi G.)](https://www.youtube.com/@Mansi.goel.offical). I followed her project workflow and recreated it using my own tool setup and dashboard design.
+This project is based on the end-to-end SQL, Python and Power BI tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical). I followed her project workflow and recreated it using my own tool setup and dashboard design.
 
 - [Guided project](https://youtu.be/LQa0SiuZfhA)
 - [Mansi G. YouTube channel](https://www.youtube.com/@Mansi.goel.offical)
