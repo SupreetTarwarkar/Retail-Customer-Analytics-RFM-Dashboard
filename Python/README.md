@@ -1,4 +1,4 @@
-# Python RFM analysis — Google Colab
+# Python RFM analysis - Google Colab
 
 Unlike the **NSE dashboard**, this project includes an actual Python/Pandas analysis stage. This is why a separate Python folder is required.
 
@@ -23,3 +23,7 @@ RFM features recur on each qualifying transaction row after the merge. Do not SU
 ### Known environment differences
 
 Colab files under `/content/` may be lost when the runtime resets. Keep raw data locally or on Drive, and preserve the notebook. The instructor uses **Anaconda to launch Jupyter Notebook**, as demonstrated in the video; this project uses **Google Colab** without Anaconda. CSV header handling differs because this project's SQL export included headers, not because Pandas behaves differently.
+
+### Guided tutorial reference
+
+[Watch the original Anaconda/Jupyter workflow in the full tutorial](https://youtu.be/LQa0SiuZfhA) by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical).

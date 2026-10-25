@@ -2,9 +2,9 @@
 
 This folder contains the project's three **original implementation stages**, numbered by execution order. It adapts the instructor's SQL Server/SSMS walkthrough to PostgreSQL + pgAdmin 4.
 
-1. `01_Data_Import_and_Combination.sql` — creates two raw staging tables, checks source counts, appends with `UNION ALL`, parses dates and prices, and validates the combined table.
-2. `02_ecommerce_customer_analytics.sql` — profiles missing IDs, nonpositive quantities, missing descriptions and exact-value duplicate groups.
-3. `03_retail_cleaned.sql` — retains one record from each group of otherwise identical transaction values.
+1. `01_Data_Import_and_Combination.sql` - creates two raw staging tables, checks source counts, appends with `UNION ALL`, parses dates and prices, and validates the combined table.
+2. `02_ecommerce_customer_analytics.sql` - profiles missing IDs, nonpositive quantities, missing descriptions and exact-value duplicate groups.
+3. `03_retail_cleaned.sql` - retains one record from each group of otherwise identical transaction values.
 
 **Important:** The first script creates staging tables **but does not automatically load the CSV files**. Use pgAdmin Import/Export for the two files before executing the remainder.
 
@@ -29,3 +29,7 @@ This folder contains the project's three **original implementation stages**, num
 ### SQL review notes
 
 The repository preserves the author's submitted SQL rather than silently changing production logic. The staging imports, source-file encoding and date formats must be validated before rerunning; the SQL scripts are **not** written to be safely rerunnable after tables already exist.
+
+### Guided tutorial reference
+
+[Watch the complete SQL, Python and Power BI tutorial](https://youtu.be/LQa0SiuZfhA) by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical).

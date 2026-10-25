@@ -1,6 +1,6 @@
 # Power BI report
 
-**Report title:** Retail Customer Analytics — RFM Segmentation & Churn Analysis
+**Report title:** Retail Customer Analytics - RFM Segmentation & Churn Analysis
 
 **Three pages:** Home Page → Business Overview → RFM Analysis.
 
@@ -26,8 +26,12 @@ The final report was developed in Power BI Desktop and styled using **Dunelm-ins
 
 ### Interactive Power BI report
 
-**Link pending final Power BI Service publication** — no placeholder URL has been presented as live.
+**Link pending final Power BI Service publication** - no placeholder URL has been presented as live.
 
 ### Refresh
 
 The report may reference a local source path. Open in Power BI Desktop, update Data source settings/Power Query as needed, refresh from the exported data and validate page totals before publication.
+
+### Guided tutorial reference
+
+[Watch the original Power BI guided project](https://youtu.be/LQa0SiuZfhA) by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical).

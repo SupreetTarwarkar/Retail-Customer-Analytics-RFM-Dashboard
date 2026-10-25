@@ -3,26 +3,26 @@
 **Guided SQL–Python–Power BI project recreated using PostgreSQL (pgAdmin), Google Colab, and Power BI**
 
 **Developed and customized by:** Supreet Jayant Tarwarkar  
-**Guided by:** Mansi Goel (Mansi G.) — [original guided project](https://github.com/the-mansi-goel/IKEA)  
+**Guided by:** [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical) (Mansi G.) - [original guided project](https://github.com/the-mansi-goel/IKEA)  
 **Focus:** Customer value • RFM segmentation • retention risk • revenue performance • business intelligence
 
-> **Portfolio / attribution notice:** This is an educational project recreated from Mansi Goel's guided *IKEA Gifting* analytics workflow, with an independent PostgreSQL/Google Colab implementation and a redesigned Power BI dashboard. The data is from the public UCI Online Retail II dataset. IKEA Gifting is a fictional project brand. The visual redesign is Dunelm-inspired, but neither IKEA nor Dunelm supplied, commissioned, endorsed, or owns the business results. All findings describe the historical sample, not current business performance.
+> **Portfolio / attribution notice:** This is an educational project recreated from [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical)'s guided *IKEA Gifting* analytics workflow, with an independent PostgreSQL/Google Colab implementation and a redesigned Power BI dashboard. The data is from the public UCI Online Retail II dataset. IKEA Gifting is a fictional project brand. The visual redesign is Dunelm-inspired, but neither IKEA nor Dunelm supplied, commissioned, endorsed, or owns the business results. All findings describe the historical sample, not current business performance.
 
 ---
 
 ## Original tutorial and guided-project credit
 
-This project follows **Mansi Goel (Mansi G.)** and her end-to-end SQL, Python and Power BI tutorial. In the original video, she uses **SQL Server Express with SQL Server Management Studio (SSMS)** for the database work and **Anaconda with Jupyter Notebook** for Python. I recreated the same analytical workflow using **PostgreSQL with pgAdmin 4** and **Google Colab**, then customized the Power BI report using a forest-and-sage design and clearer churn labels.
+This project follows **[Mansi Goel](https://www.youtube.com/@Mansi.goel.offical) (Mansi G.)** and her end-to-end SQL, Python and Power BI tutorial. In the original video, she uses **SQL Server Express with SQL Server Management Studio (SSMS)** for the database work and **Anaconda with Jupyter Notebook** for Python. I recreated the same analytical workflow using **PostgreSQL with pgAdmin 4** and **Google Colab**, then customized the Power BI report using a forest-and-sage design and clearer churn labels.
 
-- **[Watch Mansi Goel's complete guided project video — SQL, Python & Power BI](https://www.youtube.com/watch?v=LQa0SiuZfhA)**
-- **[Mansi G. — YouTube channel](https://www.youtube.com/@Mansi.goel.offical)** — further analytics tutorials and learning material
-- **[Mansi Goel's original IKEA GitHub repository](https://github.com/the-mansi-goel/IKEA)** — source BRD, dataset references and project material
+- **[Watch the complete guided project tutorial - SQL, Python & Power BI](https://youtu.be/LQa0SiuZfhA)** by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical)
+- **[Mansi G. - YouTube channel](https://www.youtube.com/@Mansi.goel.offical)** - further analytics tutorials and learning material
+- **[Original IKEA guided-project GitHub repository](https://github.com/the-mansi-goel/IKEA)** by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical) - source BRD, dataset references and project material
 
-Credit for the original concept and teaching belongs to Mansi Goel. All modifications described here are the student's implementation and visual customization; this is **not** an independent commissioned assignment or a real IKEA/Dunelm commercial engagement.
+Credit for the original concept and teaching belongs to [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical). All modifications described here are the student's implementation and visual customization; this is **not** an independent commissioned assignment or a real IKEA/Dunelm commercial engagement.
 
 ### What I changed compared with the guided tutorial
 
-| Area | Mansi Goel's tutorial | My implementation |
+| Area | [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical)'s tutorial | My implementation |
 |---|---|---|
 | SQL database and interface | SQL Server Express + SQL Server Management Studio (SSMS) | PostgreSQL + pgAdmin 4; SQL syntax adapted for PostgreSQL |
 | Python notebook environment | Anaconda + local Jupyter Notebook | Google Colab; same RFM/segmentation objectives |
@@ -88,7 +88,7 @@ The pipeline uses **PostgreSQL** for source consolidation, data validation and d
 
 
 
-**Source:** UCI Machine Learning Repository — [Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii), donated by Daqing Chen. The historical transaction dataset spans December 2009 to December 2011.
+**Source:** UCI Machine Learning Repository - [Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii), donated by Daqing Chen. The historical transaction dataset spans December 2009 to December 2011.
 
 ```text
 UCI Online Retail II
@@ -155,13 +155,13 @@ Python folder: [Python](Python/README.md). The executed notebook will be added a
 
 ## 6. Dashboard structure
 
-### Page 1 — Home Page
+### Page 1 - Home Page
 A redesigned forest-and-sage landing page with navigation to the analytical pages, a concise project description, and an RFM/key-metrics glossary.
 
-### Page 2 — Business Overview
-Four KPI cards — **Total Customers, Total Revenue, Churned %, Avg Customer Value** — plus segmentation visualizations, month/quarter/year trends, a Revenue/Customer toggle, and filters for Month, Quarter, Year, Country, Segment and churn status. Churn legends and selections use **Churned / Not Churned** labels instead of raw True / False values.
+### Page 2 - Business Overview
+Four KPI cards - **Total Customers, Total Revenue, Churned %, Avg Customer Value** - plus segmentation visualizations, month/quarter/year trends, a Revenue/Customer toggle, and filters for Month, Quarter, Year, Country, Segment and churn status. Churn legends and selections use **Churned / Not Churned** labels instead of raw True / False values.
 
-### Page 3 — RFM Analysis
+### Page 3 - RFM Analysis
 Country and segment performance summaries, average R/F/M scores, average customer value comparisons, inactivity trends and bookmark-controlled segment/country views.
 
 The redesign uses dark forest green, sage accents, white cards, and Segoe UI. It is an illustrative visual identity, not commercial Dunelm data.
@@ -228,13 +228,13 @@ For the original learning materials and complete walkthrough, see the [instructo
 
 ## 11. Author and acknowledgement
 
-**Supreet Jayant Tarwarkar** — PostgreSQL adaptation, Google Colab execution, analytical validation, Power BI implementation and custom forest-and-sage visual design.
+**Supreet Jayant Tarwarkar** - PostgreSQL adaptation, Google Colab execution, analytical validation, Power BI implementation and custom forest-and-sage visual design.
 
 [GitHub](https://github.com/SupreetTarwarkar) · [LinkedIn](https://www.linkedin.com/in/supreettarwarkar/)
 
-**Guided by: Mansi Goel (Mansi G.)** — Her full video walks through business requirements, SQL preparation, Python RFM segmentation and a three-page Power BI report.
+**Guided by: [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical) (Mansi G.)** - Her full video walks through business requirements, SQL preparation, Python RFM segmentation and a three-page Power BI report.
 
-- [Watch Mansi Goel's complete SQL, Python & Power BI tutorial](https://www.youtube.com/watch?v=LQa0SiuZfhA)
+- [Watch the complete SQL, Python & Power BI tutorial](https://youtu.be/LQa0SiuZfhA) by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical)
 - [Visit Mansi G.'s YouTube channel](https://www.youtube.com/@Mansi.goel.offical)
 - [Explore her original GitHub repository and resources](https://github.com/the-mansi-goel/IKEA)
 

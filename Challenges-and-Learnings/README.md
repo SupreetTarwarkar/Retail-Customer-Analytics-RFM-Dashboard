@@ -1,6 +1,6 @@
 # Challenges, decisions and lessons learned
 
-This documents implementation differences and data-quality caveats of the recreated guided project. It does not claim these challenges were part of Mansi Goel's own environment unless explicitly stated.
+This documents implementation differences and data-quality caveats of the recreated guided project. It does not claim these challenges were part of [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical)'s own environment unless explicitly stated.
 
 ## 1. Recreating a SQL Server tutorial in PostgreSQL
 
@@ -72,5 +72,7 @@ The tutorial exposes the churn status as a Boolean (`True` / `False`). To make l
 
 ## Credit
 
-**Guided project:** [Mansi Goel](https://github.com/the-mansi-goel/IKEA).  
+**Guided project:** [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical) - [original GitHub repository](https://github.com/the-mansi-goel/IKEA).  
+**Tutorial video:** [Watch the complete SQL, Python and Power BI walkthrough](https://youtu.be/LQa0SiuZfhA).
+
 **Independent implementation and redesign:** Supreet Jayant Tarwarkar.
