@@ -4,6 +4,8 @@
 
 The report has three pages and uses a forest-green and sage theme.
 
+**[Open Interactive Power BI Report](https://app.powerbi.com/view?r=eyJrIjoiZDYwY2Y1NTEtNTVkMS00NTFlLWFlM2YtYmRjN2E3N2RjZWVjIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9)**
+
 ## Home Page
 
 A landing page with buttons for both analysis pages, a short project description and definitions of the key metrics.

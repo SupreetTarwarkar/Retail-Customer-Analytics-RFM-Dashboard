@@ -4,6 +4,8 @@
 
 **Tools:** PostgreSQL, Python (Google Colab), Power BI
 
+**[View Interactive Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZDYwY2Y1NTEtNTVkMS00NTFlLWFlM2YtYmRjN2E3N2RjZWVjIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9)**
+
 ## 1. Overview
 
 I built this project to understand customer purchasing behavior using two years of retail transaction data. I cleaned and combined the data in PostgreSQL, used Python for RFM analysis, and built a three-page Power BI dashboard to explore customer value, churn and revenue trends.
@@ -62,7 +64,7 @@ Shows **Total Customers, Total Revenue, Churned % and Average Customer Value**. 
 
 Looks more closely at customer segments and countries. It includes performance summary tables, average R/F/M scores, customer value comparisons and churn trends.
 
-[Power BI dashboard details](PBIX/README.md)
+[View the live dashboard](https://app.powerbi.com/view?r=eyJrIjoiZDYwY2Y1NTEtNTVkMS00NTFlLWFlM2YtYmRjN2E3N2RjZWVjIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9) | [Power BI dashboard details](PBIX/README.md)
 
 ## 6. Key findings
 
