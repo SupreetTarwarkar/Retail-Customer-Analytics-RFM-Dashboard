@@ -37,4 +37,6 @@ Historical descriptive reporting with a fixed **Recency > 90 days** churn rule. 
 
 ## Guided project
 
-Based on the tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical): [Full video](https://youtu.be/LQa0SiuZfhA).
+Based on the tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical): [Full video - from 00:00](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=0s).
+
+[Back to the main README](../README.md)

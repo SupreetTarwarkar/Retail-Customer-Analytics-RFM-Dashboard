@@ -1,6 +1,6 @@
 # SQL - PostgreSQL
 
-I used PostgreSQL with pgAdmin 4 to import the two retail datasets, combine them, check data quality and remove exact duplicates.
+PostgreSQL and pgAdmin 4 were used to import the two retail datasets, combine them, check data quality and remove exact duplicates.
 
 | Script | What it does |
 |---|---|
@@ -10,7 +10,7 @@ I used PostgreSQL with pgAdmin 4 to import the two retail datasets, combine them
 
 ### SQL differences from the tutorial
 
-| Tutorial - SSMS / SQL Server | My PostgreSQL version |
+| Tutorial - SSMS / SQL Server | PostgreSQL implementation |
 |---|---|
 | SQL Server database and import wizard | PostgreSQL tables and pgAdmin CSV import |
 | SQL Server date conversion | `TO_TIMESTAMP(...)` |
@@ -24,4 +24,6 @@ I used PostgreSQL with pgAdmin 4 to import the two retail datasets, combine them
 
 **1,067,371 combined transactions** were checked and reduced to **1,033,036 records** after removing **34,335** extra duplicate rows.
 
-[Full tutorial by Mansi Goel](https://youtu.be/LQa0SiuZfhA)
+[Watch the SQL section (17:00)](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=1020s)
+
+[Back to the main README](../README.md)

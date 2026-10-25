@@ -1,29 +1,31 @@
 # Challenges & Learnings
 
-This project was guided by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical), but I used a different setup for SQL and Python and made changes to the Power BI report.
+Based on the tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical), with a different setup for SQL and Python and changes to the Power BI report.
 
 ## 1. Moving from SSMS to PostgreSQL
 
-The tutorial uses SQL Server and SSMS. I worked in PostgreSQL with pgAdmin, so the import steps and conversion syntax were different. I created two staging tables, used `UNION ALL` to combine the data and handled dates with `TO_TIMESTAMP()`.
+The tutorial uses SQL Server and SSMS. This project uses PostgreSQL with pgAdmin, requiring different import steps and conversion syntax. Two staging tables were created, `UNION ALL` combined the data, and `TO_TIMESTAMP()` handled date conversion.
 
 ## 2. Cleaning the transaction data
 
 The combined files contained **1,067,371 rows**. The quality checks covered customer IDs, quantities, descriptions and duplicates. After removing **34,335 extra duplicate rows**, the SQL cleaned table contained **1,033,036 rows**.
 
-I also encountered a CSV encoding issue during import and used PostgreSQL's `COPY` command to export the large cleaned table successfully.
+A CSV encoding issue arose during import. PostgreSQL's `COPY` command was used to export the cleaned table.
 
 ## 3. Working in Google Colab
 
-Instead of Anaconda and local Jupyter Notebook, I used Google Colab to calculate RFM scores and create six customer segments. The final customer table covered **5,881 customers**.
+Instead of Anaconda and local Jupyter Notebook, Google Colab was used to calculate RFM scores and create six customer segments. The final customer table covered **5,881 customers**.
 
 ## 4. Improving the Power BI report
 
-I redesigned the Home Page using a forest-and-sage theme and worked on consistent titles, spacing, navigation buttons and visuals.
+The Home Page was redesigned with a forest-and-sage theme, consistent titles, spacing, navigation buttons and visuals.
 
-I also added a **Churn Status** label so the existing True / False churn flag appears as **Churned / Not Churned**. The underlying rule was not changed.
+A **Churn Status** label displays the existing True / False churn flag as **Churned / Not Churned**. The underlying rule was not changed.
 
 ## 5. Keeping the analysis useful
 
-A useful dashboard needs more than charts. This project helped me check totals at each stage, understand the difference between transaction rows and customer counts, and present customer value and churn in a way that is easier to discuss.
+A useful dashboard needs more than charts. The process involved checking totals at each stage, distinguishing transaction rows from customer counts, and presenting customer value and churn in a clear, explainable format.
+
+**Related tutorial sections:** [SQL (17:00)](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=1020s) | [Python (34:40)](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=2080s) | [Power BI (46:15)](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=2775s)
 
 [Back to the main README](../README.md)

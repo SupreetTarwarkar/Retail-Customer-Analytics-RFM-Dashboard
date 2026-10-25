@@ -8,9 +8,9 @@
 
 ## 1. Overview
 
-I built this project to understand customer purchasing behavior using two years of retail transaction data. I cleaned and combined the data in PostgreSQL, used Python for RFM analysis, and built a three-page Power BI dashboard to explore customer value, churn and revenue trends.
+This project analyzes customer purchasing behavior using two years of retail transaction data. PostgreSQL was used to combine and clean the data, Python for RFM segmentation and churn analysis, and Power BI for a three-page dashboard covering customer value, churn and revenue trends.
 
-This is my version of the [guided project by Mansi Goel](https://www.youtube.com/@Mansi.goel.offical), with changes to the tools, dashboard layout, theme and churn labels.
+Based on the guided project by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical), with adjustments to the tools, dashboard layout, theme and churn labels. [Watch the tutorial from the beginning](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=0s).
 
 ## 2. Business questions
 
@@ -21,21 +21,21 @@ This is my version of the [guided project by Mansi Goel](https://www.youtube.com
 
 ## 3. Tools used
 
-| Tool | What I used it for |
-|---|---|
-| PostgreSQL / pgAdmin | Imported both datasets, combined transactions, checked data quality and removed duplicates |
-| Python / Google Colab | Calculated RFM scores, built six customer segments and flagged churned customers ([view notebook](Python/Dunelm_RFM_Segmentation.ipynb)) |
-| Power BI | Built KPIs, segment comparisons, trends, slicers and navigation |
+| Tool | Purpose | Project files |
+|---|---|---|
+| PostgreSQL / pgAdmin | Imported both datasets, combined transactions, checked data quality and removed duplicates | [Import & combination](SQL/01_Data_Import_and_Combination.sql), [data quality checks](SQL/02_ecommerce_customer_analytics.sql), [cleaning & deduplication](SQL/03_retail_cleaned.sql) |
+| Python / Google Colab | Calculated RFM scores, built six customer segments and flagged churned customers | [Google Colab notebook](Python/Dunelm_RFM_Segmentation.ipynb) |
+| Power BI | Built KPIs, segment comparisons, trends, slicers and navigation | [Interactive report](https://app.powerbi.com/view?r=eyJrIjoiZDYwY2Y1NTEtNTVkMS00NTFlLWFlM2YtYmRjN2E3N2RjZWVjIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9), [theme file](PBIX/Dunelm_Inspired_Retail_Light_Theme.json) |
 
-### My changes
+### Changes from the tutorial
 
-| Task | Purpose | Tutorial | My version |
+| Task | Purpose | Tutorial | This project |
 |---|---|---|---|
 | SQL | Data import and cleaning | SQL Server Express + SSMS | PostgreSQL + pgAdmin 4 |
 | Python | RFM scoring and segmentation | Anaconda + Jupyter Notebook | Google Colab |
 | Power BI | Dashboard and reporting | IKEA-themed dashboard | Forest-and-sage design with a new Home Page |
 
-*Note: I changed the churn labels from True / False to Churned / Not Churned to make the visuals easier to read. The churn calculation remains unchanged.*
+*Note: The churn labels are displayed as Churned / Not Churned instead of True / False for readability. The churn calculation remains unchanged.*
 
 ## 4. Data and analysis
 
@@ -48,9 +48,9 @@ The project uses the [Online Retail II dataset](https://archive.ics.uci.edu/data
 | Final Power BI dataset | **779,495** |
 | Customers analyzed using RFM | **5,881** |
 
-RFM stands for **Recency, Frequency and Monetary**. I grouped customers into **Champions, Loyal, At Risk, New, Needs Attention and Lost**. Customers with more than **90 days** since their last purchase were marked as churned.
+RFM stands for **Recency, Frequency and Monetary**. Customers were grouped into **Champions, Loyal, At Risk, New, Needs Attention and Lost**. Customers with more than **90 days** since their last purchase were marked as churned.
 
-**Analysis screenshots:** [PostgreSQL data cleaning](Images/4.%20Data%20Cleaning%20%26%20Deduplication.png) | [Python RFM segmentation](Images/5.%20Python_RFM_Segmentation_Churn_Analysis.png) | [Final Power BI dataset](Images/6.%20Python_Final_Dataset_PowerBI.png)
+**Analysis screenshots:** [PostgreSQL data cleaning](Images/4.%20Data%20Cleaning%20%26%20Deduplication.png) | [Python RFM segmentation](Images/5.%20Python_RFM_Segmentation_Churn_Analysis.png)
 
 ## 5. Dashboard pages
 
@@ -72,7 +72,7 @@ Looks more closely at customer segments and countries. It includes performance s
 
 ![RFM Analysis](Images/3.%20RFM%20Analysis.png)
 
-[View the live dashboard](https://app.powerbi.com/view?r=eyJrIjoiZDYwY2Y1NTEtNTVkMS00NTFlLWFlM2YtYmRjN2E3N2RjZWVjIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9) | [Power BI dashboard details](PBIX/README.md)
+[Explore the interactive Power BI report](https://app.powerbi.com/view?r=eyJrIjoiZDYwY2Y1NTEtNTVkMS00NTFlLWFlM2YtYmRjN2E3N2RjZWVjIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9) | [Power BI dashboard details](PBIX/README.md)
 
 ## 6. Key findings
 
@@ -99,9 +99,9 @@ The main implementation challenges, including PostgreSQL differences, data clean
 
 ## 9. Acknowledgement
 
-This project is based on the end-to-end SQL, Python and Power BI tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical). I followed her project workflow and recreated it using my own tool setup and dashboard design.
+This project follows the end-to-end SQL, Python and Power BI tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical), adapted for PostgreSQL, Google Colab and a redesigned Power BI dashboard.
 
-- [Guided project](https://youtu.be/LQa0SiuZfhA)
+- [Guided project - full video (from 00:00)](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=0s)
 - [Mansi G. YouTube channel](https://www.youtube.com/@Mansi.goel.offical)
 - [Mansi G. - Original GitHub project and resources](https://github.com/the-mansi-goel/IKEA)
 

@@ -11,3 +11,5 @@ The data includes invoice details, item descriptions, quantities, prices, custom
 - The analysis uses historical data, not current business activity.
 - Churn is defined as more than **90 days** without a recorded purchase.
 - The dashboard uses a **$** display format. The source is a UK retailer, so those amounts should not be presented as verified USD conversions.
+
+[Back to the main README](../README.md)
