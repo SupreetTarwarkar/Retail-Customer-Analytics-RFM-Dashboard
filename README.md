@@ -50,7 +50,7 @@ The project uses the [Online Retail II dataset](https://archive.ics.uci.edu/data
 
 RFM stands for **Recency, Frequency and Monetary**. I grouped customers into **Champions, Loyal, At Risk, New, Needs Attention and Lost**. Customers with more than **90 days** since their last purchase were marked as churned.
 
-**Analysis screenshots:** [PostgreSQL data cleaning](Images/4.%20Data%20Cleaning%20%26%20Deduplication.png) | [Python RFM segmentation](Images/5.%20Python%20RFM%20Segmentation%20%26%20Churn%20Analysis.png) | [Final Power BI dataset](Images/6.%20Python%20Final%20Dataset%20for%20Power%20BI.png)
+**Analysis screenshots:** [PostgreSQL data cleaning](Images/4.%20Data%20Cleaning%20%26%20Deduplication.png) | [Python RFM segmentation](Images/5.%20Python_RFM_Segmentation_Churn_Analysis.png) | [Final Power BI dataset](Images/6.%20Python_Final_Dataset_PowerBI.png)
 
 ## 5. Dashboard pages
 
