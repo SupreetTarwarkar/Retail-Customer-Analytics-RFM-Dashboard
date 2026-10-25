@@ -50,19 +50,27 @@ The project uses the [Online Retail II dataset](https://archive.ics.uci.edu/data
 
 RFM stands for **Recency, Frequency and Monetary**. I grouped customers into **Champions, Loyal, At Risk, New, Needs Attention and Lost**. Customers with more than **90 days** since their last purchase were marked as churned.
 
+**Analysis screenshots:** [PostgreSQL data cleaning](Images/4.%20Data%20Cleaning%20%26%20Deduplication.png) | [Python RFM segmentation](Images/5.%20Python%20RFM%20Segmentation%20%26%20Churn%20Analysis.png) | [Final Power BI dataset](Images/6.%20Python%20Final%20Dataset%20for%20Power%20BI.png)
+
 ## 5. Dashboard pages
 
 ### Home Page
 
 A starting page with direct navigation to Business Overview and RFM Analysis, plus a short glossary of the main customer metrics.
 
+![Home Page](Images/1.%20Home%20Page.png)
+
 ### Business Overview
 
 Shows **Total Customers, Total Revenue, Churned % and Average Customer Value**. It also includes customer and revenue comparisons by segment, charts by month/quarter/year, and filters for time, country, segment and churn.
 
+![Business Overview](Images/2.%20Business%20Overview.png)
+
 ### RFM Analysis
 
 Looks more closely at customer segments and countries. It includes performance summary tables, average R/F/M scores, customer value comparisons and churn trends.
+
+![RFM Analysis](Images/3.%20RFM%20Analysis.png)
 
 [View the live dashboard](https://app.powerbi.com/view?r=eyJrIjoiZDYwY2Y1NTEtNTVkMS00NTFlLWFlM2YtYmRjN2E3N2RjZWVjIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9) | [Power BI dashboard details](PBIX/README.md)
 
