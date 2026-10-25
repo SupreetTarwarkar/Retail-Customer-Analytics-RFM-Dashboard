@@ -29,12 +29,11 @@ This is my version of the [guided project by Mansi Goel](https://www.youtube.com
 
 | Task | Purpose | Tutorial | My version |
 |---|---|---|---|
-| SQL | Import, clean and combine data | SQL Server Express + SSMS | PostgreSQL + pgAdmin 4 |
+| SQL | Data import and cleaning | SQL Server Express + SSMS | PostgreSQL + pgAdmin 4 |
 | Python | RFM scoring and segmentation | Anaconda + Jupyter Notebook | Google Colab |
-| Churn labels | Make charts easier to read | True / False | Churned / Not Churned |
-| Dashboard | Present the analysis | IKEA-themed reference | Forest-and-sage layout with a new Home Page |
+| Power BI | Dashboard and reporting | IKEA-themed dashboard | Forest-and-sage design with a new Home Page |
 
-The churn labels were made easier to read. The underlying churn rule remains the same.
+*Note: I changed the churn labels from True / False to Churned / Not Churned to make the visuals easier to read. The churn calculation remains unchanged.*
 
 ## 4. Data and analysis
 
@@ -75,8 +74,6 @@ Looks more closely at customer segments and countries. It includes performance s
 
 **4. Revenue increases in the fourth quarter.** Total reported revenue is about **$6.16M in Q4**, compared with **$3.37M in Q1**. This is a useful pattern to explore when planning inventory, customer outreach and seasonal campaigns.
 
-*Revenue amounts above are the values displayed in the Power BI report.*
-
 ## 7. Dashboard features
 
 - Three connected report pages with navigation buttons
@@ -84,7 +81,6 @@ Looks more closely at customer segments and countries. It includes performance s
 - Segment and country comparisons
 - Monthly, quarterly and yearly trends
 - Filters and clear-slicer controls
-- Churned / Not Churned labels instead of True / False
 - Custom forest-green and sage theme
 
 ## 8. Challenges & Learnings
@@ -95,9 +91,9 @@ The main implementation challenges, including PostgreSQL differences, data clean
 
 This project is based on the end-to-end SQL, Python and Power BI tutorial by [Mansi Goel (Mansi G.)](https://www.youtube.com/@Mansi.goel.offical). I followed her project workflow and recreated it using my own tool setup and dashboard design.
 
-- [Watch the complete guided project](https://youtu.be/LQa0SiuZfhA)
+- [Guided project](https://youtu.be/LQa0SiuZfhA)
 - [Mansi G. YouTube channel](https://www.youtube.com/@Mansi.goel.offical)
-- [Original GitHub project and resources](https://github.com/the-mansi-goel/IKEA)
+- [Mansi G. - Original GitHub project and resources](https://github.com/the-mansi-goel/IKEA)
 
 ## 10. Author
 
