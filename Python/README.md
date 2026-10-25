@@ -1,5 +1,7 @@
 # Python - Google Colab
 
+**[Open the complete RFM segmentation notebook](Dunelm_RFM_Segmentation.ipynb)**
+
 I used Google Colab and Pandas to work on the cleaned transactions and build the customer-level RFM analysis.
 
 - Calculated **Recency** from each customer's latest purchase.

@@ -24,7 +24,7 @@ This is my version of the [guided project by Mansi Goel](https://www.youtube.com
 | Tool | What I used it for |
 |---|---|
 | PostgreSQL / pgAdmin | Imported both datasets, combined transactions, checked data quality and removed duplicates |
-| Python / Google Colab | Calculated RFM scores, built six customer segments and flagged churned customers |
+| Python / Google Colab | Calculated RFM scores, built six customer segments and flagged churned customers ([view notebook](Python/Dunelm_RFM_Segmentation.ipynb)) |
 | Power BI | Built KPIs, segment comparisons, trends, slicers and navigation |
 
 ### My changes
