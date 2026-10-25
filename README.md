@@ -1,6 +1,6 @@
 # Retail Customer Analytics | RFM Segmentation & Churn Analysis
 
-**End-to-end customer analytics using PostgreSQL, Python (Google Colab), and Power BI**
+**Guided SQL–Python–Power BI project recreated using PostgreSQL (pgAdmin), Google Colab, and Power BI**
 
 **Developed and customized by:** Supreet Jayant Tarwarkar  
 **Guided by:** Mansi Goel (Mansi G.) — [original guided project](https://github.com/the-mansi-goel/IKEA)  
@@ -12,13 +12,25 @@
 
 ## Original tutorial and guided-project credit
 
-This project was recreated by following **Mansi Goel (Mansi G.)** and her end-to-end SQL, Python and Power BI tutorial. Her tutorial provides the instructional foundation and original business case; this implementation follows that methodology with **PostgreSQL and Google Colab** and customizes the Power BI report with a forest-and-sage design.
+This project follows **Mansi Goel (Mansi G.)** and her end-to-end SQL, Python and Power BI tutorial. In the original video, she uses **SQL Server Express with SQL Server Management Studio (SSMS)** for the database work and **Anaconda with Jupyter Notebook** for Python. I recreated the same analytical workflow using **PostgreSQL with pgAdmin 4** and **Google Colab**, then customized the Power BI report using a forest-and-sage design and clearer churn labels.
 
 - **[Watch Mansi Goel's complete guided project video — SQL, Python & Power BI](https://www.youtube.com/watch?v=LQa0SiuZfhA)**
 - **[Mansi G. — YouTube channel](https://www.youtube.com/@Mansi.goel.offical)** — further analytics tutorials and learning material
 - **[Mansi Goel's original IKEA GitHub repository](https://github.com/the-mansi-goel/IKEA)** — source BRD, dataset references and project material
 
 Credit for the original concept and teaching belongs to Mansi Goel. All modifications described here are the student's implementation and visual customization; this is **not** an independent commissioned assignment or a real IKEA/Dunelm commercial engagement.
+
+### What I changed compared with the guided tutorial
+
+| Area | Mansi Goel's tutorial | My implementation |
+|---|---|---|
+| SQL database and interface | SQL Server Express + SQL Server Management Studio (SSMS) | PostgreSQL + pgAdmin 4; SQL syntax adapted for PostgreSQL |
+| Python notebook environment | Anaconda + local Jupyter Notebook | Google Colab; same RFM/segmentation objectives |
+| Churn status labels | Original `IsChurned` Boolean status shown as `True` / `False` | Added a readable `Churn Status` field in the Power BI report: `True → Churned` and `False → Not Churned`, used in legends, slicers, and tooltips |
+| Report design | Instructor's IKEA Gifting-themed reference | Redesigned forest-and-sage Home Page, navigation, styling, and report presentation |
+
+**Analytical distinction:** The `Churn Status` field changes how the existing Boolean flag is **presented**, not its 90-day inactivity rule or the underlying churn classification. The added field does not represent predictive churn modelling.
+
 
 ---
 
@@ -68,7 +80,7 @@ The pipeline uses **PostgreSQL** for source consolidation, data validation and d
 | DAX / Power Query | Measures, modelling and data preparation |
 | Segoe UI / forest-and-sage theme | Customized visual presentation |
 
-The instructor's original environment uses SQL Server/SSMS and a local Jupyter environment. This implementation uses PostgreSQL and Google Colab.
+**Instructor's exact workflow:** SQL Server Express + SSMS, followed by Anaconda + Jupyter Notebook. **My alternative:** PostgreSQL + pgAdmin 4, followed by Google Colab. Both feed the Power BI dashboard.
 
 ## 4. Data source and processing
 
@@ -135,7 +147,7 @@ Customers are assigned **one** of six mutually exclusive categories by ordered b
 | Needs Attention | Customers who may benefit from engagement |
 | Lost | Historically lapsed / low-recent-engagement customers |
 
-**Churn flag:** `Recency > 90` days is a **rule-based historical inactivity flag**, not a predictive model and not proof of permanent customer loss.
+**Churn flag:** `Recency > 90` days is a **rule-based historical inactivity flag**, not a predictive model and not proof of permanent customer loss. For better readability in Power BI, I also added a descriptive **`Churn Status`** field that displays `Churned` for `True` and `Not Churned` for `False`.
 
 **Important data-grain safeguard:** the enriched Power BI table is at transaction-line grain. Customer-level RFM variables are repeated on transaction lines. Do **not** sum repeated customer-level monetary/frequency/recency columns across rows.
 
@@ -147,7 +159,7 @@ Python folder: [Python](Python/README.md). The executed notebook will be added a
 A redesigned forest-and-sage landing page with navigation to the analytical pages, a concise project description, and an RFM/key-metrics glossary.
 
 ### Page 2 — Business Overview
-Four KPI cards — **Total Customers, Total Revenue, Churned %, Avg Customer Value** — plus segmentation visualizations, month/quarter/year trends, a Revenue/Customer toggle, and filters for Month, Quarter, Year, Country, Segment and churn status.
+Four KPI cards — **Total Customers, Total Revenue, Churned %, Avg Customer Value** — plus segmentation visualizations, month/quarter/year trends, a Revenue/Customer toggle, and filters for Month, Quarter, Year, Country, Segment and churn status. Churn legends and selections use **Churned / Not Churned** labels instead of raw True / False values.
 
 ### Page 3 — RFM Analysis
 Country and segment performance summaries, average R/F/M scores, average customer value comparisons, inactivity trends and bookmark-controlled segment/country views.

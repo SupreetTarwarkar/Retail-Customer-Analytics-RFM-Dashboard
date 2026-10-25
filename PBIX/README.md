@@ -12,6 +12,7 @@ The final report was developed in Power BI Desktop and styled using **Dunelm-ins
 - Business Overview: segment comparisons, revenue/customer selection, and time trends.
 - RFM Analysis: country/segment performance summaries, customer value and churn trends.
 - Interaction: slicers, clear-slicer action, page navigation, bookmark-controlled toggles.
+- **Readable churn status:** a report field named `Churn Status` presents Boolean `IsChurned` as `Churned` and `Not Churned` instead of raw `True` / `False` in the relevant visual legends, selections and tooltips. This is a display/labeling enhancement, not a changed churn algorithm.
 
 ### Final PBIX file
 

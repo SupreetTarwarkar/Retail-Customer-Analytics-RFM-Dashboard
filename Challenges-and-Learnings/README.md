@@ -4,7 +4,7 @@ This documents implementation differences and data-quality caveats of the recrea
 
 ## 1. Recreating a SQL Server tutorial in PostgreSQL
 
-The original demonstration uses SSMS. This implementation used PostgreSQL staging tables, manual CSV imports, PostgreSQL casts, `TO_TIMESTAMP`, `UNION ALL`, and a window-based deduplication query.
+The original demonstration uses **SQL Server Express with SQL Server Management Studio (SSMS)**. This implementation used PostgreSQL staging tables, manual CSV imports, PostgreSQL casts, `TO_TIMESTAMP`, `UNION ALL`, and a window-based deduplication query.
 
 **Lesson:** preserve raw tables and validate every transformation with row counts.
 
@@ -46,7 +46,7 @@ Joining RFM attributes back onto each transaction line repeats those attributes.
 
 ## 8. Colab adaptation
 
-A local Jupyter workflow was reproduced with Google Colab. Inputs and exports live under an ephemeral `/content/` path unless saved persistently.
+The original tutorial launches **Jupyter Notebook from Anaconda**; this implementation instead runs the Python analysis with **Google Colab**. Inputs and exports live under an ephemeral `/content/` path unless saved persistently.
 
 **Lesson:** environment changes affect file paths, persistence and resources; they should not change analytical logic.
 
@@ -56,7 +56,13 @@ The original reference uses IKEA-inspired branding. The new Power BI design uses
 
 **Lesson:** separate a guided foundation from original implementation work, and never imply a real corporate engagement. Explicit instructor credit preserves provenance.
 
-## 10. Analytical limitations
+## 10. User-friendly churn labels without changing classification
+
+The tutorial exposes the churn status as a Boolean (`True` / `False`). To make legends, slicers and tooltips clearer to business users, a **`Churn Status`** field was added in Power BI so `True` reads **Churned** and `False` reads **Not Churned**.
+
+**Lesson:** readable report labels improve communication, but the underlying `Recency > 90` historical inactivity rule is unchanged.
+
+## 11. Analytical limitations
 
 - Historical data, not current sales.
 - Report uses a displayed dollar symbol, but the original source is a UK retailer; FX conversion is **not** established.

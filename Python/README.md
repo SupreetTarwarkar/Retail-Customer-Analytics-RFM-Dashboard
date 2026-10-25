@@ -22,4 +22,4 @@ RFM features recur on each qualifying transaction row after the merge. Do not SU
 
 ### Known environment differences
 
-Colab files under `/content/` may be lost when the runtime resets. Keep raw data locally or on Drive, and preserve the notebook. The instructor uses Anaconda/local Jupyter; this project uses Google Colab. CSV header handling differs because this project's SQL export included headers, not because Pandas behaves differently.
+Colab files under `/content/` may be lost when the runtime resets. Keep raw data locally or on Drive, and preserve the notebook. The instructor uses **Anaconda to launch Jupyter Notebook**, as demonstrated in the video; this project uses **Google Colab** without Anaconda. CSV header handling differs because this project's SQL export included headers, not because Pandas behaves differently.
