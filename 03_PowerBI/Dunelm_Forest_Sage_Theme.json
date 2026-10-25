@@ -1,0 +1,68 @@
+{
+  "name": "Dunelm Refined | Forest & Sage | Segoe UI",
+  "dataColors": [
+    "#173F3B",
+    "#35645A",
+    "#568276",
+    "#789E90",
+    "#A0B9AB",
+    "#C8D8CE",
+    "#E3ECE6",
+    "#EDF3EE"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#173F3B",
+  "tableAccent": "#173F3B",
+  "good": "#35645A",
+  "neutral": "#A0B9AB",
+  "bad": "#A35C55",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI",
+      "fontSize": 13,
+      "color": "#173F3B"
+    },
+    "header": {
+      "fontFace": "Segoe UI",
+      "fontSize": 11,
+      "color": "#173F3B"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10,
+      "color": "#173F3B"
+    },
+    "callout": {
+      "fontFace": "Segoe UI",
+      "fontSize": 25,
+      "color": "#173F3B"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "fontFamily": "Segoe UI",
+            "fontColor": {
+              "solid": {
+                "color": "#173F3B"
+              }
+            }
+          }
+        ],
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}
