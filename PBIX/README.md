@@ -30,6 +30,6 @@ The report uses **Churned** and **Not Churned** in place of the Boolean labels T
 
 Theme: [Dunelm_Inspired_Retail_Light_Theme.json](Dunelm_Inspired_Retail_Light_Theme.json)
 
-[Watch the Power BI section (46:15)](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=2775s)
+**Related tutorial section:** [Power BI](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=2775s)
 
 [Back to the main README](../README.md)
