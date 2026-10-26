@@ -35,8 +35,10 @@ SQL scripts, Google Colab notebook, three-page Power BI dashboard, GitHub docume
 
 Historical descriptive reporting with a fixed **Recency > 90 days** churn rule. Predictive churn modelling and marketing-campaign execution are not included.
 
-## Guided project
+## Tutorial reference
 
-Based on the tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical): [Full video - from 00:00](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=0s).
+Based on the tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical).
+
+**Original tutorial video:** [SQL, Python and Power BI project](https://www.youtube.com/watch?v=LQa0SiuZfhA).
 
 [Back to the main README](../README.md)
