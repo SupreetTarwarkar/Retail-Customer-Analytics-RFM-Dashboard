@@ -101,7 +101,7 @@ The main implementation challenges, including PostgreSQL differences, data clean
 
 This project follows the end-to-end SQL, Python and Power BI tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical), adapted for PostgreSQL, Google Colab and a redesigned Power BI dashboard.
 
-- [Guided project - full video (from 00:00)](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=0s)
+- [Guided project](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=0s)
 - [Mansi G. YouTube channel](https://www.youtube.com/@Mansi.goel.offical)
 - [Mansi G. - Original GitHub project and resources](https://github.com/the-mansi-goel/IKEA)
 
