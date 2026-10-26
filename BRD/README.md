@@ -39,6 +39,6 @@ Historical descriptive reporting with a fixed **Recency > 90 days** churn rule. 
 
 Based on the tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical).
 
-**Original tutorial video:** [SQL, Python and Power BI project](https://www.youtube.com/watch?v=LQa0SiuZfhA).
+**Original tutorial video:** [SQL, Python and Power BI project](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=272s).
 
 [Back to the main README](../README.md)
