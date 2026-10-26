@@ -10,8 +10,6 @@
 
 This project analyzes customer purchasing behavior using two years of retail transaction data. PostgreSQL was used to combine and clean the data, Python for RFM segmentation and churn analysis, and Power BI for a three-page dashboard covering customer value, churn and revenue trends.
 
-Based on the guided project by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical), with adjustments to the tools, dashboard layout, theme and churn labels. [Watch the tutorial from the beginning](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=0s).
-
 ## 2. Business questions
 
 - Which customer groups bring in the most revenue?
@@ -101,7 +99,6 @@ The main implementation challenges, including PostgreSQL differences, data clean
 
 This project follows the end-to-end SQL, Python and Power BI tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical), adapted for PostgreSQL, Google Colab and a redesigned Power BI dashboard.
 
-- [Guided project](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=0s)
 - [Mansi G. YouTube channel](https://www.youtube.com/@Mansi.goel.offical)
 - [Mansi G. - Original GitHub project and resources](https://github.com/the-mansi-goel/IKEA)
 
