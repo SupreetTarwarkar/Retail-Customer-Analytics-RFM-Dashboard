@@ -31,7 +31,7 @@ This project analyzes customer purchasing behavior using two years of retail tra
 |---|---|---|---|
 | SQL | Data import and cleaning | SQL Server Express + SSMS | PostgreSQL + pgAdmin 4 |
 | Python | RFM scoring and segmentation | Anaconda + Jupyter Notebook | Google Colab |
-| Power BI | Dashboard and reporting | IKEA-themed dashboard | Forest-and-sage design with a new Home Page |
+| Power BI | Dashboard and reporting | Original tutorial dashboard | Forest-and-sage design with a new Home Page |
 
 *Note: The churn labels are displayed as Churned / Not Churned instead of True / False for readability. The churn calculation remains unchanged.*
 
@@ -100,7 +100,7 @@ The main implementation challenges, including PostgreSQL differences, data clean
 This project follows the end-to-end SQL, Python and Power BI tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical), adapted for PostgreSQL, Google Colab and a redesigned Power BI dashboard.
 
 - [Mansi G. YouTube channel](https://www.youtube.com/@Mansi.goel.offical)
-- [Mansi G. - Original GitHub project and resources](https://github.com/the-mansi-goel/IKEA)
+- [Mansi G. GitHub profile](https://github.com/the-mansi-goel)
 
 ## 10. Author
 
