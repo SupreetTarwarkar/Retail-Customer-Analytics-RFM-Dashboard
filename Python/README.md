@@ -15,6 +15,6 @@ Google Colab and Pandas were used to process the cleaned transactions and build 
 
 In the original video, [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical) uses Anaconda and Jupyter Notebook. The equivalent workflow here was completed in Google Colab.
 
-[Watch the Python section (34:40)](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=2080s)
+**Related tutorial section:** [Python](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=2080s)
 
 [Back to the main README](../README.md)
