@@ -30,6 +30,8 @@ The report uses **Churned** and **Not Churned** in place of the Boolean labels T
 
 Theme: [Dunelm_Inspired_Retail_Light_Theme.json](Dunelm_Inspired_Retail_Light_Theme.json)
 
+<sub><em>Independent educational portfolio project using the UCI Online Retail II dataset. The Dunelm-inspired visual styling is illustrative only; this is not Dunelm company data, and the project is not affiliated with or endorsed by Dunelm.</em></sub>
+
 **Related tutorial section:** [Power BI](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=2775s)
 
 [Back to the main README](../README.md)
