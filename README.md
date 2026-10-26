@@ -64,13 +64,17 @@ A starting page with direct navigation to Business Overview and RFM Analysis, pl
 
 Shows **Total Customers, Total Revenue, Churned % and Average Customer Value**. It also includes customer and revenue comparisons by segment, charts by month/quarter/year, and filters for time, country, segment and churn.
 
-![Business Overview](Images/2.%20Business%20Overview.png)
+| Revenue view | Customer view |
+|:---:|:---:|
+| ![Business Overview - Revenue](Images/2.%20Business%20Overview%20%28Revenue%29.png) | ![Business Overview - Customer](Images/2.%20Business%20Overview%20%28Customer%29.png) |
 
 ### RFM Analysis
 
 Looks more closely at customer segments and countries. It includes performance summary tables, average R/F/M scores, customer value comparisons and churn trends.
 
-![RFM Analysis](Images/3.%20RFM%20Analysis.png)
+| Segment view | Country view |
+|:---:|:---:|
+| ![RFM Analysis - Segment](Images/3.%20RFM%20Analysis%20%28Segment%29.png) | ![RFM Analysis - Country](Images/3.%20RFM%20Analysis%20%28Country%29.png) |
 
 [Explore the interactive Power BI report](https://app.powerbi.com/view?r=eyJrIjoiZDYwY2Y1NTEtNTVkMS00NTFlLWFlM2YtYmRjN2E3N2RjZWVjIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9) | [Power BI dashboard details](PBIX/README.md)
 
