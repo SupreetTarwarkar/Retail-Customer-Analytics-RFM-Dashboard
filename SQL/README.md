@@ -26,6 +26,6 @@ The SQL Server conversion examples above come from the instructor's published pr
 
 **1,067,371 combined transactions** were checked and reduced to **1,033,036 records** after removing **34,335** extra duplicate rows.
 
-**Related tutorial section:** [SQL setup and analysis](https://www.youtube.com/watch?v=LQa0SiuZfhA)
+**Related tutorial section:** [SQL setup and analysis](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=936s)
 
 [Back to the main README](../README.md)
