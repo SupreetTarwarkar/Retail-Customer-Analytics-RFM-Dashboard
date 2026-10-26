@@ -8,24 +8,19 @@ PostgreSQL and pgAdmin 4 were used to import the two retail datasets, combine th
 | [02_ecommerce_customer_analytics.sql](02_ecommerce_customer_analytics.sql) | Checks missing customer IDs, nonpositive quantities, missing descriptions and duplicate transactions |
 | [03_retail_cleaned.sql](03_retail_cleaned.sql) | Uses `ROW_NUMBER()` to keep one row from each duplicate group |
 
-### SQL Server vs PostgreSQL - syntax used in this project
+### SQL Server / SSMS vs PostgreSQL / pgAdmin - differences in this project
 
-The original tutorial uses SQL Server Management Studio (SSMS). This implementation runs on PostgreSQL using pgAdmin 4. The three SQL scripts above contain the PostgreSQL code.
+These are the differences encountered while recreating Mansi Goel's SQL workflow. Shared SQL features such as `UNION ALL`, `GROUP BY`, `HAVING`, `ROW_NUMBER()`, and `SELECT INTO` are already demonstrated in the scripts and are not listed as dialect differences.
 
-| Operation | SQL Server / SSMS equivalent | PostgreSQL used here |
+| Project step | Original tutorial: SQL Server / SSMS | Our implementation: PostgreSQL / pgAdmin 4 |
 |---|---|---|
-| Database import | SQL Server Import Flat File / Import Data wizard | Create staging tables with `CREATE TABLE`, then import CSVs through pgAdmin |
-| Create a combined table | `SELECT ... INTO new_table FROM ...` | `CREATE TABLE retail_combined AS SELECT ...` |
-| Parse date text | `CONVERT(DATETIME, ...)` / `TRY_CONVERT(...)` with a suitable input style | `TO_TIMESTAMP(NULLIF(TRIM(invoicedate), ''), 'DD-MM-YYYY HH24:MI')::TIMESTAMP` |
-| Convert price text to a decimal | `CAST(NULLIF(TRIM(price), '') AS DECIMAL(10,2))` | `NULLIF(TRIM(price), '')::NUMERIC(10,2)` |
-| Conditional record counts | `SUM(CASE WHEN condition THEN 1 ELSE 0 END)` | `COUNT(*) FILTER (WHERE condition)` |
-| Append datasets without deduplication | `UNION ALL` | `UNION ALL` |
-| Find duplicates | `GROUP BY ... HAVING COUNT(*) > 1` | Same SQL syntax |
-| Assign a row number within duplicate groups | `ROW_NUMBER() OVER (PARTITION BY ... ORDER BY ...)` | Same window-function syntax |
-| Save selected rows to a new table | `SELECT ... INTO table_name FROM ...` | `SELECT ... INTO retail_cleaned FROM Deduped WHERE row_num = 1` |
-| Export CSV | SSMS Export Wizard or `bcp` | PostgreSQL `COPY` or pgAdmin Export |
+| Import both retail CSVs | SQL Server import workflow | Created two staging tables and imported the CSV files through pgAdmin |
+| Create combined transactions | `SELECT ... INTO dbo.RetailCombined` | `CREATE TABLE retail_combined AS SELECT ... UNION ALL ...` |
+| Convert invoice dates | `COALESCE(TRY_CONVERT(datetime2, InvoiceDate, 120), TRY_CONVERT(datetime2, InvoiceDate, 105))` | `TO_TIMESTAMP(NULLIF(TRIM(invoicedate), ''), 'DD-MM-YYYY HH24:MI')::TIMESTAMP` |
+| Convert text prices | `TRY_CONVERT(decimal(10,2), Price)` | `NULLIF(TRIM(price), '')::NUMERIC(10,2)` |
+| Export the cleaned CSV | SQL Server / SSMS export workflow | Used PostgreSQL server-side `COPY ... WITH (FORMAT CSV, HEADER TRUE)` |
 
-**Notes:** `UNION ALL`, `COUNT(*)`, `GROUP BY`, `HAVING`, `WITH` (CTE) and `ROW_NUMBER()` are supported by both database systems; they are not PostgreSQL-specific features. The `COPY` export step is described in the workflow but is not included in the three published SQL scripts.
+The SQL Server conversion examples above come from the instructor's published project documentation; our exact PostgreSQL expressions appear in [01_Data_Import_and_Combination.sql](01_Data_Import_and_Combination.sql). The `COPY` export was part of our completed workflow but is not included in the three published SQL scripts.
 
 ### Result
 
