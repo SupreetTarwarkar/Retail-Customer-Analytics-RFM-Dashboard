@@ -1,7 +1,6 @@
 # Business Requirements Document
 
 **Project:** Retail Customer Analytics - RFM Segmentation & Churn Analysis  
-**Prepared by:** Supreet Jayant Tarwarkar  
 **Tools:** PostgreSQL, Python (Google Colab), Power BI
 
 ## Objective
