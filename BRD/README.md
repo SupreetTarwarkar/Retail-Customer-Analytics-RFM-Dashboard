@@ -35,6 +35,8 @@ SQL scripts, Google Colab notebook, three-page Power BI dashboard, GitHub docume
 
 Historical descriptive reporting with a fixed **Recency > 90 days** churn rule. Predictive churn modelling and marketing-campaign execution are not included.
 
+<sub><em>Independent educational portfolio project using the UCI Online Retail II dataset. The Dunelm-inspired visual styling is illustrative only; this is not Dunelm company data, and the project is not affiliated with or endorsed by Dunelm.</em></sub>
+
 ## Tutorial reference
 
 Based on the tutorial by [Mansi Goel](https://www.youtube.com/@Mansi.goel.offical).
