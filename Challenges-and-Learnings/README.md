@@ -26,6 +26,6 @@ A **Churn Status** label displays the existing True / False churn flag as **Chur
 
 A useful dashboard needs more than charts. The process involved checking totals at each stage, distinguishing transaction rows from customer counts, and presenting customer value and churn in a clear, explainable format.
 
-**Related tutorial sections:** [SQL](https://www.youtube.com/watch?v=LQa0SiuZfhA) | [Python](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=2080s) | [Power BI](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=2775s)
+**Related tutorial sections:** [SQL](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=936s) | [Python](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=2080s) | [Power BI](https://www.youtube.com/watch?v=LQa0SiuZfhA&t=2775s)
 
 [Back to the main README](../README.md)
