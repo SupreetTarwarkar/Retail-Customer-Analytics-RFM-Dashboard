@@ -31,7 +31,7 @@ This project analyzes customer purchasing behavior using two years of retail tra
 |---|---|---|---|
 | SQL | Data import and cleaning | SQL Server Express + SSMS | PostgreSQL + pgAdmin 4 |
 | Python | RFM scoring and segmentation | Anaconda + Jupyter Notebook | Google Colab |
-| Power BI | Dashboard and reporting | Original tutorial dashboard | Forest-and-sage design with a new Home Page |
+| Power BI | Dashboard and reporting | Original tutorial dashboard | Dunelm-inspired forest-and-sage design with a new Home Page |
 
 *Note: The churn labels are displayed as Churned / Not Churned instead of True / False for readability. The churn calculation remains unchanged.*
 
