@@ -35,6 +35,8 @@ This project analyzes customer purchasing behavior using two years of retail tra
 
 *Note: The churn labels are displayed as Churned / Not Churned instead of True / False for readability. The churn calculation remains unchanged.*
 
+<sub><em>Independent educational portfolio project using the UCI Online Retail II dataset. The Dunelm-inspired visual styling is illustrative only; this is not Dunelm company data, and the project is not affiliated with or endorsed by Dunelm.</em></sub>
+
 ## 4. Data and analysis
 
 The project uses the [Online Retail II dataset](https://archive.ics.uci.edu/dataset/502/online+retail+ii), containing sales transactions from December 2009 to December 2011.
